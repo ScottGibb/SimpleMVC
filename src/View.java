@@ -26,7 +26,7 @@ public class View implements IView, Observer {
      */
     public View(IModel model) {
         this.model = model;
-        ((Model) model).addObserver(this);
+        model.addObserver(this);
         controller = new Controller(this, model);
         buildButtons();
         setButtons();

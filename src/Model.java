@@ -1,4 +1,6 @@
+import java.io.ObjectStreamException;
 import java.util.Observable;
+import java.util.Observer;
 
 public class Model extends Observable implements IModel {
 
@@ -61,4 +63,10 @@ public class Model extends Observable implements IModel {
         setChanged();
         notifyObservers();
     }
+
+    @Override
+        public void addObserver(Observer o) {
+            super.addObserver(o);
+
+        }
 }
