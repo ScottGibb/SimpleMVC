@@ -64,6 +64,12 @@ public class Model extends Observable implements IModel {
         notifyObservers();
     }
 
+    /**
+     * requires: o != NULL
+     * Modifies: this
+     * effects: adds an Observer for the model
+     *
+     */
     @Override
         public void addObserver(Observer o) {
             super.addObserver(o);
